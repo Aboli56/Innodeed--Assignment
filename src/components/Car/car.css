@@ -1,0 +1,52 @@
+.card-body {
+  width: 18rem;
+}
+.card-headings {
+  padding: 10px;
+}
+.card-headings .brand{
+  font-size: 1.3rem;
+}
+.headings2 {
+  display: flex;
+  gap: 5px;
+}
+.headings2 .modelType{
+  font-size: 1.1rem;
+}
+.cartImg img {
+  width: 18rem;
+}
+.brand {
+  color: gray;
+}
+.modelType {
+  color: gray;
+}
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.btn {
+  padding: 10px 20px;
+  color: rgb(95, 95, 241);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-body {
+    width: 24rem;
+  }
+  .btn {
+    font-size: 0.8rem;
+  }
+  .headings2 {
+    display: block;
+  }
+  .cartImg img {
+    width: 20rem;
+  }
+}

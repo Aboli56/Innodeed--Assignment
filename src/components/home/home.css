@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.custom-button-group {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  right: 20px;
+}
+.container-padding-bottom {
+  padding-bottom: 25px;
+}
+.btn {
+  border-radius: 50%;
+  cursor: pointer;
+}
+.swipe{
+  font-size: 1.5rem;
+  color: rgb(70, 67, 67);
+  font-weight: 600;
+}
+.search{
+  display: flex;
+  align-items: center;
+  background-color: rgb(233,233,233);
+  border-radius: 10px;
+  padding: 5px;
+  height: 2em;
+  margin-bottom: 1.5em;
+  font-size: 1.3rem;
+}
+.search i{
+  padding: 10px;
+}
+.search input{
+  border: none;
+  background-color: rgb(233,233,233);
+  width: 100%;
+  margin: 0 10px;
+}
+.search input:focus{
+  outline: none;
+}
