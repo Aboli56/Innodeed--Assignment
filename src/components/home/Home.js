@@ -6,10 +6,13 @@ import "./home.css";
 const Home = () => {
   let [cars, setCars] = useState([]);
   const [value, setValue] = useState("");
+  const [loading, setLoading] = useState(false);
   const getData = async () => {
+    setLoading(true)
     const response = await fetch("api/cars.json");
     const data = await response.json();
     setCars(data)
+    setLoading(false)
   };
   useEffect(() => {
     getData();
@@ -50,6 +53,8 @@ const Home = () => {
         <input type="text" value={value} onChange={(e)=>handleChange(e)} placeholder="Search ....."/>
     </div>
     </div>
+    {loading ? <h2>Loading ....</h2> :(
+    <>
     {!cars.length>0 ? <h2>Data Not Found....</h2> : (
     <Carousel
       arrows={false}
@@ -61,6 +66,8 @@ const Home = () => {
         return <Car key={car.id} car={car} />;
       })}
     </Carousel>
+     )}
+     </>
      )}
     </>
   );
@@ -100,3 +107,4 @@ const CustomButtonGroup = ({
 };
 
 export default Home;
+
